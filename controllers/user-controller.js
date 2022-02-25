@@ -9,6 +9,7 @@ module.exports = {
         //return 500 and the error if users data can't be retrieved
         .catch((err) => res.status(500).json(err))
     },
+
     //GET user by id
     getSingleUser(req, res){
         // find user by id typed in parameters
@@ -37,6 +38,7 @@ module.exports = {
                 res.status(500).json(err)
             })
     },
+
     // POST new user
     createUser(req, res){
         // use the info entered in req.body
@@ -47,6 +49,7 @@ module.exports = {
                 res.status(500).json(err)
             })
     },
+
     // PUT update single user by id
     updateUser(req, res){
         // Find user by id
@@ -69,6 +72,7 @@ module.exports = {
             res.status(500).json(err)
         })
     },
+
     //DELETE user by id
     deleteUser(req, res){
         // find user by id
@@ -88,6 +92,7 @@ module.exports = {
             res.status(500).json(err)
         })
     },
+
     //PUT to add a friend by userId + friendId
     addFriend(req, res){
         // find user whose friends list we want to update
@@ -111,6 +116,7 @@ module.exports = {
             res.status(500).json(err)
         })
     },
+    
     //DELETE friend by userId + FriendID
     deleteFriend(req, res){
         // find user whose friends list we want to edit
