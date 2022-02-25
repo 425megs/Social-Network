@@ -216,3 +216,8 @@ You are required to submit BOTH of the following for review:
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+
+
+[create/getAll/update/getSingle Thought Routes](https://www.youtube.com/watch?v=dZoBLhyR4gk)
+[addFriend/deleteFriend/deleteUser Routes](https://www.youtube.com/watch?v=pmuwhxMEyww)
+[create/getAll/update/getSingle User Routes](https://www.youtube.com/watch?v=DI7MUZbLOL8)
