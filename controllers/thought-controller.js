@@ -89,7 +89,7 @@ module.exports = {
     deleteThought(req, res) {
         // find thought by id
         Thought.findOneAndDelete(
-            { _id: req.params.userId }
+            { _id: req.params.thoughtId }
         )
             .then(deleteThought => {
                 // if no thought has the entered id number, throw an error
