@@ -3,7 +3,7 @@ const { Schema, model, Types } = require('mongoose');
 const moment = require('moment');
 
 // Related to ThoughtSchema
-const ReactionSchema = new Schema ({
+const ReactionSchema = new Schema({
     reactionId: {
         type: Schema.Types.ObjectId,
         default: () => new Types.ObjectId()
@@ -24,14 +24,14 @@ const ReactionSchema = new Schema ({
         get: (timeStamp) => moment(timeStamp).format('MMMM Do YYYY, h:mm:ss a')
     }
 },
-{
-    toJSON: {
-        getters: true,
-    }
-});
+    {
+        toJSON: {
+            getters: true,
+        }
+    });
 
 // Model takes the ReactionSchema data and stores it in a key called reactions
-const ThoughtSchema = new Schema ({
+const ThoughtSchema = new Schema({
     thoughtText: {
         type: String,
         required: true,
@@ -49,15 +49,15 @@ const ThoughtSchema = new Schema ({
     },
     reactions: [ReactionSchema]
 },
-{
-    toJSON: {
-        virtuals: true,
-        getters: true
-    }
-});
+    {
+        toJSON: {
+            virtuals: true,
+            getters: true
+        }
+    });
 
 // Returns length of the reactions array from inividual users Thoughts
-ThoughtSchema.virtual('reactionCount').get(function (){
+ThoughtSchema.virtual('reactionCount').get(function () {
     return this.reactions.length;
 });
 

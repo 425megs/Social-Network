@@ -29,12 +29,12 @@ const UserSchema = new Schema({
     }],
 
 },
-{
-    //display on client side
-    toJSON: {
-        virtuals: true,
-    }
-});
+    {
+        //display on client side
+        toJSON: {
+            virtuals: true,
+        }
+    });
 
 // Returns length of friends array
 UserSchema.virtual('friendCount').get(function () {
